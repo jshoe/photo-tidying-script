@@ -49,7 +49,7 @@ for i in $(ls *.jpg *.dng 2> /dev/null) ; do
   mv "$i" "$dir"
 done
 
-# Move files to proper CRUZER location.
+# Move files to proper location.
 for dir in */ ; do
   cd "$dir"
   dest="/Users/jonathan/Pictures/Memories/2015/$dir"
