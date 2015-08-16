@@ -1,4 +1,7 @@
 # Photo Tidying Script
-Example of using BASH scripting to tidy your photos in a hot folder, rename to a uniform format, and sort them into a photo library.
+Example of using BASH scripting to tidy photos and videos in a hot folder, rename different file name formats to a uniform format, sort them into monthly folders in a photo library, and then generate a compressed copy for mobile devices. Uses ImageMagick for photo conversions.
 
-![interface screenshot](screenshots/demo.png "Sample photo rename and sorting job.")
+Date authored: June 25, 2015
+
+##### Demo execution process:
+![interface screenshot](screenshots/demo1.png "Sample photo rename, sorting, and compression job.")

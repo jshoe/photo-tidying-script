@@ -1,3 +1,5 @@
+cd "/Users/jonathan/Dropbox/DropSync Uploads"
+
 # Confirmation dialogue to avoid disasters.
 echo -e "\nCurrent directory is $PWD.\n\nWARNING: This program does not make any backups of the source material. Using this script in an improperly structured folder can lead to catastrophic results.\n"
 read -p "Are you sure you want to continue (y/n)? " choice
@@ -19,7 +21,7 @@ for dir in */ ; do
     mv "$file" ..
   done
   cd ..
-  rmdir "$dir"
+  rmdir "$dir" > /dev/null 2>&1
 done
 
 # Rename JPG to jpg.
@@ -43,7 +45,7 @@ for i in $(ls *.jpg 2> /dev/null) ; do
 done
 
 # Sorts files into 2015-XX-XX folders.
-for i in $(ls *.jpg *.dng 2> /dev/null) ; do
+for i in $(ls *.jpg *.dng *.mp4 2> /dev/null) ; do
   dir=`echo ${i:0:8}XX Daily Life`
   mkdir "$dir" > /dev/null 2>&1
   mv "$i" "$dir"
